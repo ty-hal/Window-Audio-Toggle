@@ -1,0 +1,72 @@
+{
+  "manifest_version": 3,
+  "name": "Window Audio Toggle",
+  "version": "1.0",
+  "description": "Toggle audio between different Chrome windows - perfect for watching multiple games",
+  "permissions": [
+    "windows",
+    "tabs",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "commands": {
+    "solo-window-1": {
+      "suggested_key": {
+        "default": "Alt+1",
+        "mac": "Alt+1"
+      },
+      "description": "Solo window 1 (mute others)"
+    },
+    "solo-window-2": {
+      "suggested_key": {
+        "default": "Alt+2",
+        "mac": "Alt+2"
+      },
+      "description": "Solo window 2 (mute others)"
+    },
+    "solo-window-3": {
+      "suggested_key": {
+        "default": "Alt+3",
+        "mac": "Alt+3"
+      },
+      "description": "Solo window 3 (mute others)"
+    },
+    "unmute-all": {
+      "suggested_key": {
+        "default": "Alt+4",
+        "mac": "Alt+4"
+      },
+      "description": "Unmute all windows"
+    },
+    "solo-window-4": {
+      "description": "Solo window 4 (mute others)"
+    },
+    "solo-window-5": {
+      "description": "Solo window 5 (mute others)"
+    },
+    "solo-window-6": {
+      "description": "Solo window 6 (mute others)"
+    },
+    "solo-window-7": {
+      "description": "Solo window 7 (mute others)"
+    },
+    "solo-window-8": {
+      "description": "Solo window 8 (mute others)"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

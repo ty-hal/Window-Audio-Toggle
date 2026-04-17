@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 300px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      padding: 12px;
+    }
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .windows-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .window-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .window-item.muted {
+      background: #f0f0f0;
+      opacity: 0.7;
+    }
+    .window-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .window-title {
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .window-url {
+      font-size: 10px;
+      color: #666;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+    .window-number {
+      font-size: 10px;
+      color: #999;
+      margin-top: 2px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 4px;
+    }
+    button {
+      border: none;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .btn-mute {
+      background: #43a047;
+      color: #fff;
+      min-width: 50px;
+    }
+    .btn-mute.muted {
+      background: #e53935;
+    }
+    .btn-solo {
+      background: #eee;
+      color: #333;
+      border: 1px solid #ccc;
+    }
+    .btn-solo:hover {
+      background: #ddd;
+    }
+    .btn-solo.active {
+      background: #ff9800;
+      border-color: #ff9800;
+    }
+    .header-actions {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .btn-header {
+      flex: 1;
+      background: #fff;
+      color: #333;
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+    .btn-header:hover {
+      background: #eee;
+    }
+    .shortcuts-info {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      font-size: 10px;
+      color: #666;
+    }
+    .shortcuts-info strong {
+      color: #333;
+    }
+    .no-windows {
+      text-align: center;
+      color: #999;
+      padding: 20px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Window Audio Toggle</h1>
+  
+  <div class="header-actions">
+    <button class="btn-header" id="unmuteAll">Unmute All</button>
+    <button class="btn-header" id="muteAll">Mute All</button>
+  </div>
+  
+  <div class="windows-list" id="windowsList"></div>
+  
+  <div class="shortcuts-info">
+    <strong>Shortcuts:</strong><br>
+    Option + 1-9 - Solo window<br>
+    Option + 0 - Unmute all
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
