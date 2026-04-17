@@ -20,28 +20,28 @@
     "solo-window-1": {
       "suggested_key": {
         "default": "Alt+1",
-        "mac": "Alt+1"
+        "mac": "Option+1"
       },
       "description": "Solo window 1 (mute others)"
     },
     "solo-window-2": {
       "suggested_key": {
         "default": "Alt+2",
-        "mac": "Alt+2"
+        "mac": "Option+2"
       },
       "description": "Solo window 2 (mute others)"
     },
     "solo-window-3": {
       "suggested_key": {
         "default": "Alt+3",
-        "mac": "Alt+3"
+        "mac": "Option+3"
       },
       "description": "Solo window 3 (mute others)"
     },
     "unmute-all": {
       "suggested_key": {
-        "default": "Alt+4",
-        "mac": "Alt+4"
+        "default": "Alt+0",
+        "mac": "Option+0"
       },
       "description": "Unmute all windows"
     },
